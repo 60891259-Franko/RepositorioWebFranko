@@ -1,152 +1,149 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
-<title>Portafolio | Franko Mendoza</title>
-
-<!-- Iconos -->
-<link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Fuente -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-
-<link rel="stylesheet" href="estilos.css">
-```
-
+    <title>Franko Mendoza | Portafolio de Ingeniería de Sistemas</title>
+    <!-- Enlace a los estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome para iconos modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+<body class="weather-nublado">
 
-<body>
-
-```
-<!-- ================= HEADER / HERO ================= -->
-<header class="hero">
-
-    <!-- Elementos decorativos de nubes -->
-    <div class="nube nube-1"></div>
-    <div class="nube nube-2"></div>
-    <div class="nube nube-3"></div>
-
-    <div class="lluvia-suave"></div>
-
-    <div class="contenedor hero-contenido">
-
-        <div class="perfil">
-
-            <div class="contenedorFoto">
-                <img src="./imagenes/foto3.jpg"
-                    alt="Fotografía de Franko Mendoza"
-                    class="foto">
-            </div>
-
-            <div class="profile-info">
-                <span class="etiqueta-clima">
-                    <i class="fa-solid fa-cloud"></i>
-                    Portafolio personal
-                </span>
-
-                <h1>Franko Mendoza</h1>
-
-                <p class="profesion">
-                    Estudiante de Ingeniería de Sistemas
-                </p>
-
-                <p class="descripcion-hero">
-                    Interesado en el desarrollo web, la programación
-                    y la creación de soluciones tecnológicas.
-                </p>
-            </div>
-
-        </div>
-
+    <!-- Selector de Clima Interactivo -->
+    <div class="weather-selector-bar">
+        <span><i class="fa-solid fa-cloud-sun"></i> Cambiar Clima:</span>
+        <button class="weather-btn" onclick="setWeather('soleado')">☀ Soleado</button>
+        <button class="weather-btn active" onclick="setWeather('nublado')">☁ Nublado</button>
+        <button class="weather-btn" onclick="setWeather('lluvioso')">🌧 Lluvia</button>
+        <button class="weather-btn" onclick="setWeather('nevado')">❄ Nevado</button>
+        <button class="weather-btn" onclick="setWeather('niebla')">🌫 Niebla</button>
+        <button class="weather-btn" onclick="setWeather('tropical')">🌴 Tropical</button>
     </div>
 
-    <a href="#sobre-mi" class="scroll-indicator" aria-label="Ver contenido">
-        <i class="fa-solid fa-chevron-down"></i>
-    </a>
-
-</header>
-
-
-<main>
-
-    <!-- ================= SOBRE MÍ ================= -->
-    <section id="sobre-mi">
-
-        <div class="contenedor">
-
-            <div class="titulo-seccion">
-                <i class="fa-solid fa-cloud"></i>
-                <h2>Sobre Mí</h2>
+    <!-- Encabezado / Hero -->
+    <header class="hero-section">
+        <div class="weather-animation-container" id="weatherAnimation"></div>
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="img/foto3.jpg" alt="Foto de perfil de Franko Mendoza" class="profile-img">
             </div>
-
-            <div class="sobre-contenido">
-
-                <p>
-                    Soy estudiante de Ingeniería de Sistemas y actualmente
-                    estoy fortaleciendo mis conocimientos en programación,
-                    desarrollo web y tecnologías digitales.
-                </p>
-
-                <p>
-                    Me interesa aprender mediante proyectos prácticos,
-                    experimentar con nuevas herramientas y desarrollar
-                    soluciones que combinen funcionalidad, diseño y
-                    tecnología.
-                </p>
-
-            </div>
-
+            <h1 class="hero-title">Franko Mendoza</h1>
+            <p class="hero-subtitle">"Estudiante de Ingeniería de Sistemas e Informática"</p>
+            <p class="hero-desc">Apasionado por el desarrollo de software, la tecnología, el diseño web moderno y la innovación.</p>
         </div>
+    </header>
 
-    </section>
-
-
-    <!-- ================= PROYECTOS ================= -->
-    <section id="proyectos">
-
-        <div class="contenedor">
-
-            <div class="titulo-seccion">
-                <i class="fa-solid fa-cloud-sun"></i>
-                <h2>Mis Proyectos</h2>
+    <main>
+        <!-- Sección Sobre Mí -->
+        <section class="about-section" id="sobre-mi">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fa-solid fa-cloud section-icon"></i>
+                    <h2>Sobre Mí</h2>
+                    <div class="divider"></div>
+                </div>
+                <p class="about-text">
+                    Hola, soy Franko Mendoza, estudiante de Ingeniería de Sistemas e Informática. Me interesa el desarrollo de software, la tecnología, el diseño web y la creación de soluciones eficientes e innovadoras.
+                </p>
             </div>
+        </section>
 
-            <p class="subtitulo">
-                Algunos proyectos y trabajos relacionados con mi aprendizaje
-                en tecnología y desarrollo.
-            </p>
+        <!-- Sección Mis Proyectos -->
+        <section class="projects-section" id="proyectos">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fa-solid fa-laptop-code section-icon"></i>
+                    <h2>Mis Proyectos</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Tarjeta 1 -->
+                    <article class="project-card">
+                        <div class="card-icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+                        <h3>Weather App</h3>
+                        <p>Aplicación web interactiva para consultar las condiciones meteorológicas en tiempo real utilizando APIs externas.</p>
+                    </article>
+                    <!-- Tarjeta 2 -->
+                    <article class="project-card">
+                        <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                        <h3>Gestor de Tareas</h3>
+                        <p>Aplicación web para organizar actividades diarias, prioridades y recordatorios de manera eficiente.</p>
+                    </article>
+                    <!-- Tarjeta 3 -->
+                    <article class="project-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-column"></i></div>
+                        <h3>Visualización de datos</h3>
+                        <p>Sistema diseñado para procesar y representar información estadística mediante gráficos dinámicos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            <div class="proyectos-container">
+        <!-- Sección Habilidades -->
+        <section class="skills-section" id="habilidades">
+            <div class="skills-overlay"></div>
+            <div class="container">
+                <div class="section-header">
+                    <i class="fa-solid fa-code section-icon"></i>
+                    <h2>Habilidades</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="skills-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+        </section>
 
-                <article class="proyecto">
-
-                    <div class="icono-proyecto">
-                        <i class="fa-solid fa-laptop-code"></i>
+        <!-- Sección Contacto -->
+        <section class="contact-section" id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <i class="fa-solid fa-envelope section-icon"></i>
+                    <h2>Contacto</h2>
+                    <div class="divider"></div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="tucorreo@email.com" required>
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-                    <h3>Portafolio Web</h3>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2026 Franko Mendoza. Todos los derechos reservados.</p>
+            <div class="footer-decoration"><i class="fa-solid fa-cloud"></i></div>
+        </div>
+    </footer>
 
-                    <p>
-                        Desarrollo de una página personal utilizando
-                        HTML, CSS y JavaScript para presentar información,
-                        habilidades y proyectos.
-                    </p>
-
-                    <span class="tecnologia">
-                        HTML · CSS · JavaScript
-                    </span>
-
-                </article>
-
-
-                <article class="proyecto">
-
-                    <di
-```
+    <!-- Enlace al script de JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
