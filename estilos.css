@@ -1,0 +1,1670 @@
+/* =========================================
+   VARIABLES GENERALES
+========================================= */
+
+:root {
+
+    --color-principal: #60758d;
+    --color-principal-dark: #263442;
+    --color-acento: #91a6bb;
+
+    --color-fondo: #f1f4f7;
+    --color-fondo-alt: #e7edf2;
+
+    --color-blanco: #ffffff;
+    --color-texto: #1f2b36;
+    --color-texto-suave: #657482;
+
+    --color-footer: #202b37;
+
+    --sombra: 0 10px 30px rgba(31, 43, 54, 0.10);
+
+    --radio: 16px;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--color-texto);
+
+    background: var(--color-fondo);
+
+    overflow-x: hidden;
+
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(24, 35, 47, 0.62),
+            rgba(38, 52, 66, 0.88)
+        ),
+        url("../img/clima-nublado.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/* Si no existe la imagen de clima,
+   el gradiente mantiene el diseño */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,255,255,.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(150,180,210,.12),
+            transparent 30%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.logo i {
+    font-size: 22px;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 38px;
+
+    align-items: center;
+
+}
+
+
+.nav-links a {
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,.75);
+
+    transition: .25s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: white;
+
+}
+
+
+.nav-links a:first-child {
+
+    color: white;
+
+    position: relative;
+
+}
+
+
+.nav-links a:first-child::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 2px;
+
+    bottom: -9px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+}
+
+
+.theme-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   NUBES
+========================================= */
+
+.cloud {
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 65px;
+
+    background: rgba(255,255,255,.06);
+
+    border-radius: 100px;
+
+    filter: blur(4px);
+
+    animation: floatingCloud 20s linear infinite;
+
+}
+
+
+.cloud::before,
+.cloud::after {
+
+    content: "";
+
+    position: absolute;
+
+    background: inherit;
+
+    border-radius: 50%;
+
+}
+
+
+.cloud::before {
+
+    width: 90px;
+
+    height: 90px;
+
+    left: 35px;
+
+    bottom: 10px;
+
+}
+
+
+.cloud::after {
+
+    width: 110px;
+
+    height: 110px;
+
+    right: 30px;
+
+    bottom: 5px;
+
+}
+
+
+.cloud-1 {
+
+    top: 90px;
+
+    left: -40px;
+
+}
+
+
+.cloud-2 {
+
+    top: 150px;
+
+    right: -100px;
+
+    transform: scale(.8);
+
+    animation-delay: -8s;
+
+}
+
+
+.cloud-3 {
+
+    top: 30px;
+
+    left: 45%;
+
+    transform: scale(.55);
+
+    animation-delay: -14s;
+
+}
+
+
+@keyframes floatingCloud {
+
+    from {
+        transform: translateX(-30px);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    to {
+        transform: translateX(-30px);
+    }
+
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    width: min(1100px, 90%);
+
+    min-height: 310px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 170px 1fr 150px;
+
+    align-items: center;
+
+    gap: 35px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.profile-container {
+
+    width: 165px;
+
+    height: 165px;
+
+    border-radius: 50%;
+
+    padding: 5px;
+
+    background: rgba(255,255,255,.45);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+}
+
+
+.profile-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 50%;
+
+    border: 4px solid #303c49;
+
+}
+
+
+.hero-text .small-title {
+
+    color: #d4dde5;
+
+    margin-bottom: 4px;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: clamp(35px, 5vw, 48px);
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+
+}
+
+
+.hero-text h2 {
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    color: #b7c7d6;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero-description {
+
+    max-width: 520px;
+
+    color: #d3dce5;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.social-links {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 18px;
+
+}
+
+
+.social-links a {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: grid;
+
+    place-items: center;
+
+    transition: .25s;
+
+}
+
+
+.social-links a:hover {
+
+    transform: translateY(-3px);
+
+    color: #b6cee2;
+
+}
+
+
+/* =========================================
+   WEATHER CARD
+========================================= */
+
+.weather-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.weather-icon {
+
+    font-size: 48px;
+
+    color: #b8c7d5;
+
+}
+
+
+.weather-card strong {
+
+    display: block;
+
+    font-size: 30px;
+
+}
+
+
+.weather-card span,
+.weather-card small {
+
+    display: block;
+
+}
+
+
+.weather-card span {
+
+    font-size: 13px;
+
+    margin-top: 3px;
+
+}
+
+
+.weather-card small {
+
+    color: #aebdca;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.section {
+
+    padding: 75px 0;
+
+}
+
+
+.section-container {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: var(--color-principal);
+
+    margin-bottom: 8px;
+
+}
+
+
+.section h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================
+   SOBRE MI
+========================================= */
+
+.about {
+
+    background: #f7f9fa;
+
+}
+
+
+.about .section-container {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 1.1fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+}
+
+
+.about-text p {
+
+    max-width: 500px;
+
+    color: var(--color-texto-suave);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 15px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background: var(--color-principal-dark);
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: .25s;
+
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.about-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+}
+
+
+.info-item > i {
+
+    font-size: 22px;
+
+    color: var(--color-principal);
+
+    width: 25px;
+
+}
+
+
+.info-item strong,
+.info-item span {
+
+    display: block;
+
+}
+
+
+.info-item strong {
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.info-item span {
+
+    font-size: 12px;
+
+    color: var(--color-texto-suave);
+
+}
+
+
+.about-image {
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================
+   PROYECTOS
+========================================= */
+
+.projects {
+
+    background: #e8edf1;
+
+}
+
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 25px;
+
+}
+
+
+.view-all {
+
+    font-size: 13px;
+
+    color: var(--color-principal-dark);
+
+}
+
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.project-card {
+
+    min-height: 205px;
+
+    border-radius: var(--radio);
+
+    overflow: hidden;
+
+    position: relative;
+
+    color: white;
+
+    background: #263442;
+
+    box-shadow: var(--sombra);
+
+    transition: .3s;
+
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+
+.project-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(20,31,43,.35),
+            rgba(20,31,43,.90)
+        );
+
+}
+
+
+.weather-project {
+
+    background:
+        linear-gradient(
+            rgba(35,49,63,.30),
+            rgba(20,31,43,.95)
+        ),
+        url("../img/clima-nublado.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.code-project {
+
+    background:
+        linear-gradient(
+            rgba(35,49,63,.30),
+            rgba(20,31,43,.95)
+        ),
+        url("../img/perfil.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.portfolio-project {
+
+    background:
+        linear-gradient(
+            rgba(35,49,63,.30),
+            rgba(20,31,43,.95)
+        ),
+        url("../img/clima-nublado.jpg");
+
+    background-size: cover;
+
+}
+
+
+.project-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+}
+
+
+.project-icon {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,.12);
+
+    display: grid;
+
+    place-items: center;
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+.project-content h3 {
+
+    margin-bottom: 7px;
+
+    font-size: 17px;
+
+}
+
+
+.project-content p {
+
+    color: #c6d0da;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 13px;
+
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+}
+
+
+.tags span {
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    background: rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================
+   HABILIDADES
+========================================= */
+
+.skills {
+
+    background: #f4f7f9;
+
+}
+
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px 50px;
+
+    margin-top: 30px;
+
+}
+
+
+.skill-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.skill-title i {
+
+    font-size: 22px;
+
+    color: var(--color-principal);
+
+}
+
+
+.skill-title strong {
+
+    margin-left: auto;
+
+    font-size: 10px;
+
+    color: var(--color-texto-suave);
+
+}
+
+
+.skill-bar {
+
+    width: 100%;
+
+    height: 5px;
+
+    background: #dce3e8;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.skill-bar span {
+
+    height: 100%;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background: var(--color-principal);
+
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contact {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(30,43,56,.92),
+            rgba(30,43,56,.96)
+        ),
+        url("../img/clima-nublado.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.contact .section-label {
+
+    color: #aebdca;
+
+}
+
+
+.contact-content h2 {
+
+    color: white;
+
+}
+
+
+.contact-content p {
+
+    color: #c4cfd8;
+
+    max-width: 400px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+
+.contact .section-container {
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.contact-form {
+
+    background: rgba(255,255,255,.06);
+
+    padding: 25px;
+
+    border-radius: var(--radio);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 15px;
+
+}
+
+
+.form-group label {
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+
+    color: #d6dee5;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    border: 1px solid rgba(255,255,255,.14);
+
+    outline: none;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    color: white;
+
+    background: rgba(255,255,255,.08);
+
+    transition: .25s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #9db4c8;
+
+    background: rgba(255,255,255,.12);
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #9ba8b4;
+
+}
+
+
+.contact-form .primary-button {
+
+    margin-top: 0;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    background: #18232e;
+
+    color: #c0ccd6;
+
+    padding: 25px 0;
+
+}
+
+
+.footer-container {
+
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    font-size: 11px;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+}
+
+
+.footer-logo i {
+
+    font-size: 17px;
+
+}
+
+
+.footer-logo span {
+
+    color: #8795a1;
+
+    padding-left: 8px;
+
+    border-left: 1px solid #52616e;
+
+}
+
+
+.footer-message {
+
+    text-align: right;
+
+}
+
+
+.footer-message i {
+
+    margin-left: 7px;
+
+}
+
+
+/* =========================================
+   CLIMA SOLEADO
+========================================= */
+
+.weather-soleado {
+
+    --color-principal: #3b82a6;
+    --color-principal-dark: #25617f;
+    --color-acento: #f4c95d;
+
+}
+
+
+/* =========================================
+   CLIMA LLUVIOSO
+========================================= */
+
+.weather-lluvioso {
+
+    --color-principal: #42647d;
+    --color-principal-dark: #1e3445;
+    --color-acento: #8bb5cf;
+
+}
+
+
+/* =========================================
+   CLIMA NEVADO
+========================================= */
+
+.weather-nevado {
+
+    --color-principal: #6c9ab9;
+    --color-principal-dark: #35566f;
+    --color-acento: #dcecf5;
+
+}
+
+
+/* =========================================
+   CLIMA NIEBLA
+========================================= */
+
+.weather-niebla {
+
+    --color-principal: #788895;
+    --color-principal-dark: #46535e;
+    --color-acento: #dce3e8;
+
+}
+
+
+/* =========================================
+   CLIMA TROPICAL
+========================================= */
+
+.weather-tropical {
+
+    --color-principal: #368f86;
+    --color-principal-dark: #17665f;
+    --color-acento: #71c8a8;
+
+}
+
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+.section {
+
+    animation: sectionAppear .7s ease both;
+
+}
+
+
+@keyframes sectionAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+
+        grid-template-columns: 140px 1fr;
+
+    }
+
+
+    .profile-container {
+
+        width: 140px;
+
+        height: 140px;
+
+    }
+
+
+    .weather-card {
+
+        display: none;
+
+    }
+
+
+    .about .section-container {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .about-image {
+
+        grid-column: span 2;
+
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .contact .section-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+    .hero {
+
+        min-height: auto;
+
+        padding-bottom: 50px;
+
+    }
+
+
+    .navbar {
+
+        height: 65px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .hero-content {
+
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 20px;
+
+        padding-top: 25px;
+
+    }
+
+
+    .profile-container {
+
+        width: 125px;
+
+        height: 125px;
+
+        margin: auto;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .hero-text h2 {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero-description {
+
+        margin: auto;
+
+        font-size: 13px;
+
+    }
+
+
+    .social-links {
+
+        justify-content: center;
+
+    }
+
+
+    .section {
+
+        padding: 55px 0;
+
+    }
+
+
+    .about .section-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .about-image {
+
+        grid-column: auto;
+
+    }
+
+
+    .about-image img {
+
+        height: 200px;
+
+    }
+
+
+    .section-header {
+
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-container {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .footer-message {
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCIR ANIMACIONES
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
