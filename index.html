@@ -2,82 +2,82 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Portafolio personal de Franko Mendoza, estudiante de Ingeniería de Sistemas.">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Franko Mendoza | Ingeniería de Sistemas</title>
 
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="estilos.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="weather-nublado">
 
-    <!-- =========================
-         HEADER / HERO
-    ========================== -->
-
-    <header class="hero">
-
-        <div class="cloud cloud-1"></div>
-        <div class="cloud cloud-2"></div>
-        <div class="cloud cloud-3"></div>
-
-        <nav class="navbar">
-
-            <a href="#inicio" class="logo">
-                <i class="fa-solid fa-cloud"></i>
-                <span>FM</span>
-            </a>
-
-            <div class="nav-links">
-
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a href="#contacto">Contacto</a>
-
-            </div>
-
-            <button class="theme-button" id="themeButton" aria-label="Cambiar clima">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-
-        </nav>
+<body>
 
 
-        <div class="hero-content" id="inicio">
+    <!-- ==============================
+         NAVEGACIÓN
+    =============================== -->
 
-            <div class="profile-container">
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <span>FM</span>
+
+        </div>
+
+
+        <div class="menu">
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#sobre-mi">Sobre mí</a>
+
+            <a href="#proyectos">Proyectos</a>
+
+            <a href="#habilidades">Habilidades</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ==============================
+         INICIO
+    =============================== -->
+
+    <section class="inicio" id="inicio">
+
+        <div class="inicio-contenido">
+
+
+            <div class="foto-contenedor">
 
                 <img
-                    src="img/perfil.jpg"
-                    alt="Foto de perfil de Franko Mendoza"
-                    class="profile-image">
+                    src="imagenes/perfil.jpg"
+                    alt="Fotografía de Franko Mendoza">
 
             </div>
 
 
-            <div class="hero-text">
+            <div class="presentacion">
 
-                <p class="small-title">
+                <p class="saludo">
                     Hola, soy
                 </p>
 
@@ -89,567 +89,551 @@
                     Estudiante de Ingeniería de Sistemas
                 </h2>
 
-                <p class="hero-description">
-                    Apasionado por la tecnología, el desarrollo de software
-                    y la creación de soluciones que hacen la vida más fácil.
+                <p class="descripcion">
+
+                    Me interesa la tecnología, la programación
+                    y el desarrollo de soluciones digitales.
+                    Actualmente estoy construyendo mis conocimientos
+                    en el mundo de la informática.
+
                 </p>
 
 
-                <div class="social-links">
+                <div class="redes">
 
-                    <a href="#" aria-label="GitHub">
+                    <a href="#">
+
                         <i class="fa-brands fa-github"></i>
+
                     </a>
 
-                    <a href="#" aria-label="LinkedIn">
+
+                    <a href="#">
+
                         <i class="fa-brands fa-linkedin"></i>
+
                     </a>
 
-                    <a href="mailto:franko.mendoza@example.com"
-                        aria-label="Correo electrónico">
+
+                    <a href="#contacto">
+
                         <i class="fa-solid fa-envelope"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-
-            <div class="weather-card">
-
-                <i class="fa-solid fa-cloud weather-icon"></i>
-
-                <div>
-                    <strong id="temperature">
-                        18°C
-                    </strong>
-
-                    <span>
-                        Lima, Perú
-                    </span>
-
-                    <small id="weatherText">
-                        Nublado
-                    </small>
-                </div>
-
-            </div>
 
         </div>
 
-    </header>
+    </section>
 
 
-    <main>
 
-        <!-- =========================
-             SOBRE MÍ
-        ========================== -->
+    <!-- ==============================
+         SOBRE MÍ
+    =============================== -->
 
-        <section class="about section" id="sobre-mi">
+    <section class="seccion" id="sobre-mi">
 
-            <div class="section-container">
+        <div class="contenedor">
 
-                <div class="about-text">
+            <span class="etiqueta">
+                SOBRE MÍ
+            </span>
 
-                    <span class="section-label">
-                        SOBRE MÍ
-                    </span>
+            <h2>
+                Conociendo un poco más sobre mí
+            </h2>
 
-                    <h2>
-                        Un poco sobre mí
-                    </h2>
 
-                    <p>
-                        Soy estudiante de Ingeniería de Sistemas.
-                        Me interesa el desarrollo de software, la tecnología,
-                        la inteligencia artificial y todo lo relacionado
-                        con la innovación.
-                    </p>
+            <div class="sobre-grid">
+
+
+                <div class="texto">
 
                     <p>
-                        Siempre estoy buscando aprender algo nuevo
-                        y mejorar mis habilidades.
+
+                        Soy estudiante de Ingeniería de Sistemas
+                        y tengo interés por aprender cómo la
+                        tecnología puede utilizarse para resolver
+                        problemas de la vida cotidiana.
+
                     </p>
 
-                    <a href="#" class="primary-button">
-                        <i class="fa-solid fa-download"></i>
-                        Descargar CV
-                    </a>
+
+                    <p>
+
+                        Actualmente estoy desarrollando mis
+                        conocimientos en programación, desarrollo
+                        web y herramientas tecnológicas.
+
+                    </p>
+
+
+                    <p>
+
+                        Mi objetivo es continuar aprendiendo y
+                        adquirir experiencia para desarrollarme
+                        profesionalmente en el área de sistemas.
+
+                    </p>
 
                 </div>
 
 
-                <div class="about-info">
+                <div class="datos">
 
-                    <div class="info-item">
+
+                    <div class="dato">
 
                         <i class="fa-solid fa-graduation-cap"></i>
 
                         <div>
-                            <strong>Estudios</strong>
-                            <span>Ingeniería de Sistemas</span>
+
+                            <strong>
+                                Carrera
+                            </strong>
+
+                            <span>
+                                Ingeniería de Sistemas
+                            </span>
+
                         </div>
 
                     </div>
 
 
-                    <div class="info-item">
+                    <div class="dato">
 
                         <i class="fa-solid fa-location-dot"></i>
 
                         <div>
-                            <strong>Ubicación</strong>
-                            <span>Perú</span>
+
+                            <strong>
+                                País
+                            </strong>
+
+                            <span>
+                                Perú
+                            </span>
+
                         </div>
 
                     </div>
 
 
-                    <div class="info-item">
+                    <div class="dato">
 
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-code"></i>
 
                         <div>
-                            <strong>Intereses</strong>
-                            <span>Programación, tecnología, música</span>
+
+                            <strong>
+                                Área de interés
+                            </strong>
+
+                            <span>
+                                Tecnología y programación
+                            </span>
+
                         </div>
 
                     </div>
 
-                </div>
-
-
-                <div class="about-image">
-
-                    <img
-                        src="img/perfil.jpg"
-                        alt="Franko Mendoza trabajando en un entorno tecnológico">
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PROYECTOS
-        ========================== -->
-
-        <section class="projects section" id="proyectos">
-
-            <div class="section-container">
-
-                <div class="section-header">
-
-                    <div>
-                        <span class="section-label">
-                            MIS PROYECTOS
-                        </span>
-
-                        <h2>
-                            Algunos de mis trabajos
-                        </h2>
-                    </div>
-
-                    <a href="#" class="view-all">
-                        Ver todos
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                </div>
-
-
-                <div class="project-grid">
-
-
-                    <!-- Proyecto 1 -->
-
-                    <article class="project-card">
-
-                        <div class="project-background weather-project"></div>
-
-                        <div class="project-content">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-cloud"></i>
-                            </div>
-
-                            <h3>
-                                Clima App
-                            </h3>
-
-                            <p>
-                                Aplicación web para consultar el clima
-                                actual y el pronóstico de diferentes ciudades.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Proyecto 2 -->
-
-                    <article class="project-card">
-
-                        <div class="project-background code-project"></div>
-
-                        <div class="project-content">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-list-check"></i>
-                            </div>
-
-                            <h3>
-                                Gestor de Tareas
-                            </h3>
-
-                            <p>
-                                Aplicación para organizar tareas diarias
-                                mediante una interfaz sencilla y funcional.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>Python</span>
-                                <span>SQLite</span>
-                                <span>Tkinter</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Proyecto 3 -->
-
-                    <article class="project-card">
-
-                        <div class="project-background portfolio-project"></div>
-
-                        <div class="project-content">
-
-                            <div class="project-icon">
-                                <i class="fa-solid fa-code"></i>
-                            </div>
-
-                            <h3>
-                                Portafolio Personal
-                            </h3>
-
-                            <p>
-                                Sitio web personal donde muestro mis
-                                proyectos y habilidades.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
-        <!-- =========================
-             HABILIDADES
-        ========================== -->
 
-        <section class="skills section" id="habilidades">
+    <!-- ==============================
+         PROYECTOS
+    =============================== -->
 
-            <div class="section-container">
+    <section class="seccion proyectos" id="proyectos">
 
-                <span class="section-label">
-                    HABILIDADES
-                </span>
+        <div class="contenedor">
 
-                <h2>
-                    Tecnologías que manejo
-                </h2>
+            <span class="etiqueta">
+                PROYECTOS
+            </span>
 
-
-                <div class="skills-grid">
+            <h2>
+                Mis proyectos
+            </h2>
 
 
-                    <div class="skill">
+            <div class="proyectos-grid">
 
-                        <div class="skill-title">
 
-                            <i class="fa-brands fa-python"></i>
+                <div class="tarjeta">
 
-                            <span>Python</span>
+                    <div class="icono">
 
-                            <strong>80%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:80%"></span>
-                        </div>
+                        <i class="fa-solid fa-globe"></i>
 
                     </div>
 
-
-                    <div class="skill">
-
-                        <div class="skill-title">
-
-                            <i class="fa-brands fa-html5"></i>
-
-                            <span>HTML</span>
-
-                            <strong>90%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:90%"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill">
-
-                        <div class="skill-title">
-
-                            <i class="fa-brands fa-css3-alt"></i>
-
-                            <span>CSS</span>
-
-                            <strong>85%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:85%"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill">
-
-                        <div class="skill-title">
-
-                            <i class="fa-brands fa-js"></i>
-
-                            <span>JavaScript</span>
-
-                            <strong>75%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:75%"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill">
-
-                        <div class="skill-title">
-
-                            <i class="fa-brands fa-git-alt"></i>
-
-                            <span>Git</span>
-
-                            <strong>70%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:70%"></span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="skill">
-
-                        <div class="skill-title">
-
-                            <i class="fa-brands fa-figma"></i>
-
-                            <span>Figma</span>
-
-                            <strong>60%</strong>
-
-                        </div>
-
-                        <div class="skill-bar">
-                            <span style="width:60%"></span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACTO
-        ========================== -->
-
-        <section class="contact section" id="contacto">
-
-            <div class="section-container">
-
-                <div class="contact-content">
-
-                    <span class="section-label">
-                        CONTACTO
-                    </span>
-
-                    <h2>
-                        Hablemos
-                    </h2>
+                    <h3>
+                        Página web
+                    </h3>
 
                     <p>
-                        Si te interesa colaborar o simplemente quieres
-                        saludar, no dudes en escribirme.
+
+                        Desarrollo de una página web
+                        utilizando HTML y CSS.
+
+                    </p>
+
+                    <span class="tecnologia">
+                        HTML · CSS
+                    </span>
+
+                </div>
+
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">
+
+                        <i class="fa-brands fa-python"></i>
+
+                    </div>
+
+                    <h3>
+                        Programa en Python
+                    </h3>
+
+                    <p>
+
+                        Desarrollo de programas utilizando
+                        variables, condicionales y ciclos.
+
+                    </p>
+
+                    <span class="tecnologia">
+                        Python
+                    </span>
+
+                </div>
+
+
+
+                <div class="tarjeta">
+
+                    <div class="icono">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                    </div>
+
+                    <h3>
+                        Portafolio personal
+                    </h3>
+
+                    <p>
+
+                        Página personal para presentar
+                        información académica y proyectos.
+
+                    </p>
+
+                    <span class="tecnologia">
+                        HTML · CSS · JavaScript
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         HABILIDADES
+    =============================== -->
+
+    <section class="seccion" id="habilidades">
+
+        <div class="contenedor">
+
+            <span class="etiqueta">
+                HABILIDADES
+            </span>
+
+            <h2>
+                Mis conocimientos
+            </h2>
+
+
+            <div class="habilidades-grid">
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-brands fa-python"></i>
+
+                        <span>
+                            Python
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        80%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:80%"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-brands fa-html5"></i>
+
+                        <span>
+                            HTML
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        85%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:85%"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-brands fa-css3-alt"></i>
+
+                        <span>
+                            CSS
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        75%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:75%"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-brands fa-js"></i>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        65%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:65%"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-brands fa-git-alt"></i>
+
+                        <span>
+                            Git
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        65%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:65%"></span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="habilidad">
+
+                    <div>
+
+                        <i class="fa-solid fa-database"></i>
+
+                        <span>
+                            Bases de datos
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        55%
+                    </strong>
+
+                    <div class="barra">
+
+                        <span style="width:55%"></span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         CONTACTO
+    =============================== -->
+
+    <section class="contacto" id="contacto">
+
+        <div class="contenedor">
+
+            <span class="etiqueta">
+                CONTACTO
+            </span>
+
+            <h2>
+                ¿Hablamos?
+            </h2>
+
+
+            <div class="contacto-grid">
+
+
+                <div>
+
+                    <p>
+
+                        Si deseas comunicarte conmigo,
+                        puedes utilizar el siguiente formulario.
+
                     </p>
 
                 </div>
 
 
-                <form class="contact-form" id="contactForm">
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-
-                            <label for="name">
-                                Nombre
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                placeholder="Tu nombre"
-                                required>
-
-                        </div>
+                <form onsubmit="enviarMensaje(event)">
 
 
-                        <div class="form-group">
-
-                            <label for="email">
-                                Correo
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                placeholder="tu@email.com"
-                                required>
-
-                        </div>
-
-                    </div>
+                    <input
+                        type="text"
+                        placeholder="Tu nombre"
+                        required>
 
 
-                    <div class="form-group">
-
-                        <label for="message">
-                            Mensaje
-                        </label>
-
-                        <textarea
-                            id="message"
-                            rows="5"
-                            placeholder="Escribe tu mensaje..."
-                            required></textarea>
-
-                    </div>
+                    <input
+                        type="email"
+                        placeholder="Tu correo"
+                        required>
 
 
-                    <button
-                        type="submit"
-                        class="primary-button">
+                    <textarea
+                        rows="5"
+                        placeholder="Escribe tu mensaje"
+                        required></textarea>
+
+
+                    <button type="submit">
 
                         Enviar mensaje
+
                         <i class="fa-solid fa-paper-plane"></i>
 
                     </button>
 
+
                 </form>
 
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-        <div class="footer-container">
-
-            <div class="footer-logo">
-
-                <i class="fa-solid fa-cloud"></i>
-
-                <strong>FM</strong>
-
-                <span>
-                    Portafolio Personal
-                </span>
 
             </div>
-
-
-            <p>
-                © 2026 Franko Mendoza.
-                Todos los derechos reservados.
-            </p>
-
-
-            <p class="footer-message">
-
-                El clima cambia, pero las ganas
-                de aprender siempre están.
-
-                <i class="fa-solid fa-cloud"></i>
-
-            </p>
 
         </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         PIE DE PÁGINA
+    =============================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Franko Mendoza · Ingeniería de Sistemas
+        </p>
 
     </footer>
 
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+
+    <script src="codigo.js"></script>
+
 
 </body>
 
